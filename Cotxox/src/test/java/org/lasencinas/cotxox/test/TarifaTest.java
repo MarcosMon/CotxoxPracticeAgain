@@ -1,14 +1,20 @@
 package org.lasencinas.cotxox.test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
+import org.lasencinas.cotxox.tarifa.Tarifa;
 
 public class TarifaTest {
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void comprobarCosteDistancia() {
+		double distancia = 7.75;
+		double total = 10.4625;
+		assertEquals(10.4625, Tarifa.getCosteMilla(distancia), 0);
+		
 	}
+
+	
 
 }

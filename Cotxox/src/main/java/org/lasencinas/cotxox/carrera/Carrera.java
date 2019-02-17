@@ -1,5 +1,7 @@
 package org.lasencinas.cotxox.carrera;
 
+import org.lasencinas.cotxox.tarifa.Tarifa;
+
 /**
  * Hello world!
  *
@@ -9,6 +11,7 @@ public class Carrera {
 	private String tarjetaCredito;
 	private double tiempoCarrera;
 	private double costeTotal;
+	private double costeEsperado;
 	private String conductor;
 	private String origen;
 	private double distancia;
@@ -59,6 +62,11 @@ public class Carrera {
 
 	public void setTiempoEsperado(double tiempoEsperado) {
 		this.tiempoEsperado = tiempoEsperado;
+	}
+	
+	public double getCosteEsperado() {
+		
+		return Tarifa.getCosteTotalEsperado(this);
 	}
 	
 	
