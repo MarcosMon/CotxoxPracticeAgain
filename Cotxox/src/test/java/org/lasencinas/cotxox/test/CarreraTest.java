@@ -13,7 +13,15 @@ public class CarreraTest {
 		String origen = "Aeroport Son Sant Joan";
 		carrera.setOrigen(origen);
 		assertEquals(origen, carrera.getOrigen());
-		
+
+	}
+
+	@Test
+	public void comprobarDestino() {
+		Carrera carrera = new Carrera();
+		String destino = "Magaluf";
+		carrera.setDestino(destino);
+		assertEquals(destino, carrera.getDestino());
 	}
 
 }

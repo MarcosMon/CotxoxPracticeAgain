@@ -11,6 +11,8 @@ public class Carrera {
 	private double costeTotal;
 	private String conductor;
 	private String origen;
+	private double distancia;
+	private String destino;
 
 	public Carrera() {
 
@@ -34,4 +36,14 @@ public class Carrera {
 		this.origen = origen;
 
 	}
+
+	public String getDestino() {
+		return destino;
+	}
+
+	public void setDestino(String destino) {
+		this.destino = destino;
+	}
+	
+	
 }
