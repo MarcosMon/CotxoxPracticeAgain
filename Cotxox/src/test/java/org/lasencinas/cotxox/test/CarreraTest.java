@@ -23,5 +23,13 @@ public class CarreraTest {
 		carrera.setDestino(destino);
 		assertEquals(destino, carrera.getDestino());
 	}
+	
+	@Test
+	public void comprobarDistancia() {
+		Carrera carrera = new Carrera();
+		double distancia = 7.75;
+		carrera.setDistancia(distancia);
+		assertEquals(distancia, carrera.getDistancia(), 0);
+	}
 
 }
