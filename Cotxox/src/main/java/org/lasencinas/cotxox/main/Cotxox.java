@@ -2,6 +2,8 @@ package org.lasencinas.cotxox.main;
 
 import java.util.ArrayList;
 
+import org.lasencinas.cotxox.carrera.Carrera;
+
 
 
 public class Cotxox {
