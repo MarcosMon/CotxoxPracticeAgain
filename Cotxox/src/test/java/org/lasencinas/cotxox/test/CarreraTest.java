@@ -31,5 +31,14 @@ public class CarreraTest {
 		carrera.setDistancia(distancia);
 		assertEquals(distancia, carrera.getDistancia(), 0);
 	}
+	
+	@Test
+	public void comprobarTiempoEsperado() {
+		Carrera carrera = new Carrera();
+		int tiempoEsperadoMinutos = 10;
+		carrera.setTiempoEsperado(tiempoEsperadoMinutos);
+		assertEquals(tiempoEsperadoMinutos, carrera.getTiempoEsperado(), 0);
+		
+	}
 
 }

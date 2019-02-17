@@ -52,6 +52,14 @@ public class Carrera {
 	public void setDistancia(double distancia) {
 		this.distancia = distancia;
 	}
+
+	public double getTiempoEsperado() {
+		return tiempoEsperado;
+	}
+
+	public void setTiempoEsperado(double tiempoEsperado) {
+		this.tiempoEsperado = tiempoEsperado;
+	}
 	
 	
 }
