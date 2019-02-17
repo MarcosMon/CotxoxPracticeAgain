@@ -3,16 +3,15 @@ package org.lasencinas.cotxox.main;
 import java.util.ArrayList;
 
 import org.lasencinas.cotxox.carrera.Carrera;
-
-
+import org.lasencinas.cotxox.conductores.Conductor;
+import org.lasencinas.cotxox.conductores.PoolConductores;
 
 public class Cotxox {
 
 	public static void main(String[] args) {
 
-		/* 
-		 * Configuracion del usuario
-		 * y de la Carrera.
+		/*
+		 * Configuracion del usuario y de la Carrera.
 		 * 
 		 */
 
@@ -45,9 +44,9 @@ public class Cotxox {
 
 		System.out.println("\n#####" + "\t Get a ride: Driver: \t" + "#####\n");
 
-		/* Necesitamos crear la flota de conductores de donde seleccionar uno
-		 * para ofrecer el servicio.
-		 * La flota es un objeto de tipo PoolConductores.
+		/*
+		 * Necesitamos crear la flota de conductores de donde seleccionar uno para
+		 * ofrecer el servicio. La flota es un objeto de tipo PoolConductores.
 		 */
 
 		ArrayList<Conductor> poolConductores = new ArrayList<>();
@@ -97,7 +96,7 @@ public class Cotxox {
 			System.out.println("Esta conductora no esta disponible :/");
 		}
 		// cancel ride
-		// contact by phone		
+		// contact by phone
 
 		System.out.println("\n#####" + "\t Pay and Tip: \t" + "#####\n");
 

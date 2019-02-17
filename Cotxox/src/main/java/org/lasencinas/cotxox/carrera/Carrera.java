@@ -1,5 +1,7 @@
 package org.lasencinas.cotxox.carrera;
 
+import org.lasencinas.cotxox.conductores.Conductor;
+import org.lasencinas.cotxox.conductores.PoolConductores;
 import org.lasencinas.cotxox.tarifa.Tarifa;
 
 /**
@@ -12,10 +14,11 @@ public class Carrera {
 	private double tiempoCarrera;
 	private double costeTotal;
 	private double costeEsperado;
-	private String conductor;
+	private Conductor conductor;
 	private String origen;
 	private double distancia;
 	private String destino;
+	private int propina;
 
 	public Carrera() {
 
@@ -63,11 +66,50 @@ public class Carrera {
 	public void setTiempoEsperado(double tiempoEsperado) {
 		this.tiempoEsperado = tiempoEsperado;
 	}
-	
+
 	public double getCosteEsperado() {
-		
+
 		return Tarifa.getCosteTotalEsperado(this);
 	}
-	
-	
+
+	public double getTiempoCarrera() {
+		return tiempoCarrera;
+	}
+
+	public void setTiempoCarrera(int tiempoCarrera) {
+		this.tiempoCarrera = tiempoCarrera;
+	}
+
+	public void setConductor(Conductor conductor) {
+		this.conductor = conductor;
+	}
+
+	public Conductor getConductor() {
+		return this.conductor;
+	}
+
+	public void asignarConductor(PoolConductores conductores) {
+		setConductor(conductores.asignarConductor());
+	}
+
+	public void realizarPago(double pago) {
+		this.costeTotal = pago;
+	}
+
+	public double getCosteTotal() {
+		return this.costeTotal;
+	}
+
+	public void recibirPropina(int propina) {
+		this.propina = propina;
+	}
+
+	public int getPropina() {
+		return this.propina;
+	}
+
+	public void liberarConductor() {
+		getConductor().setOcupado(false);
+	}
+
 }
