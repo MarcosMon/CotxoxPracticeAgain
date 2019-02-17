@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 import org.lasencinas.cotxox.carrera.Carrera;
+import org.lasencinas.cotxox.tarifa.Tarifa;
 
 public class CarreraTest {
 
@@ -23,7 +24,7 @@ public class CarreraTest {
 		carrera.setDestino(destino);
 		assertEquals(destino, carrera.getDestino());
 	}
-	
+
 	@Test
 	public void comprobarDistancia() {
 		Carrera carrera = new Carrera();
@@ -31,14 +32,26 @@ public class CarreraTest {
 		carrera.setDistancia(distancia);
 		assertEquals(distancia, carrera.getDistancia(), 0);
 	}
-	
+
 	@Test
 	public void comprobarTiempoEsperado() {
 		Carrera carrera = new Carrera();
 		int tiempoEsperadoMinutos = 10;
 		carrera.setTiempoEsperado(tiempoEsperadoMinutos);
 		assertEquals(tiempoEsperadoMinutos, carrera.getTiempoEsperado(), 0);
-		
+
+	}
+
+	@Test
+	public void comprobarCosteTotalEsperado() {
+		Carrera carrera = new Carrera();
+		double distancia = 7.75;
+		int tiempoEsperadoMinutos = 10;
+		carrera.setDistancia(distancia);
+		carrera.setTiempoEsperado(tiempoEsperadoMinutos);
+		Tarifa.getCosteTotalEsperado(carrera);
+		double costeTotalEsperado = 13.9625;
+		assertEquals(costeTotalEsperado, carrera.getCosteEsperado(), 0);
 	}
 
 }

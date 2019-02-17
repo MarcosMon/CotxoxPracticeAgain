@@ -12,15 +12,14 @@ public class TarifaTest {
 		double distancia = 7.75;
 		double total = 10.4625;
 		assertEquals(10.4625, Tarifa.getCosteMilla(distancia), 0);
-		
+
 	}
+
 	@Test
 	public void comprobarCosteTiempo() {
 		double tiempoEsperadoMinutos = 10;
 		double total = 3.5;
-		assertEquals(total, Tarifa.getCosteTiempo(tiempoEsperadoMinutos),0);
+		assertEquals(total, Tarifa.getCosteTiempo(tiempoEsperadoMinutos), 0);
 	}
-
-	
 
 }
